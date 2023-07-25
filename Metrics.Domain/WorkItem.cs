@@ -2,8 +2,8 @@
 
 public class WorkItem
 {
-    public int Id { get; set; }
-    public string Title { get; set; }
+    public int Id { get; }
+    public string Title { get; }
     public DateTime? MarkedAsInProgress { get; }
     public DateTime? MarkedAsInDone { get; }
 

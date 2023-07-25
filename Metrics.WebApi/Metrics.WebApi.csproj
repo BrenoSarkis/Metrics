@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Metrics.Domain.Application\Metrics.Domain.Application.csproj" />
     <ProjectReference Include="..\Metrics.Domain.Boundaries\Metrics.Domain.Boundaries.csproj" />
+    <ProjectReference Include="..\Metrics.Services\Metrics.Services.csproj" />
   </ItemGroup>
 
 </Project>

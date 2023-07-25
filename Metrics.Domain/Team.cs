@@ -4,18 +4,19 @@ public class Team
 {
     public int Id { get;  }
     public string Name { get; }
-    private static Backlog backlog => new();
+    public Backlog Backlog { get; }
 
-    public Team(int id, String name) {
+    public Team(int id, String name, Backlog backlog) {
         Id = id;
         Name = name;
+        Backlog = backlog;
     }
 
     public TimeSpan CalculateAverageCycleTime() {
-        return backlog.CalculateAverageLifeCycle();
+        return Backlog.CalculateAverageLifeCycle();
     }
 
     public void AddWorkItems(params WorkItem[] items) {
-        backlog.AddWorkItems(items);
+        Backlog.AddWorkItems(items);
     }
 }

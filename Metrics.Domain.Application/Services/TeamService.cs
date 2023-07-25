@@ -43,8 +43,12 @@ public class TeamService : ITeamService {
         }
 
         teamRepository.EraseAllData();
+
         foreach (var team in teamsFromSource) {
-            teamRepository.Save(new Team(team.Id, team.Name));
+            var backlog = new Backlog();
+            var workItems = team.Backlog.Items.Select(x => new WorkItem(x.Id, x.Title, x.MarkedAsInProgress, x.MarkedAsInDone)).ToArray();
+            backlog.AddWorkItems(workItems);
+            teamRepository.Save(new Team(team.Id, team.Name, backlog));
         }
     }
 }

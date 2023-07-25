@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metrics.Tests", "Metrics.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metrics.Domain.Boundaries", "Metrics.Domain.Boundaries\Metrics.Domain.Boundaries.csproj", "{BFE64BB0-EC5C-4C6B-9ED8-7F790C51ED19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metrics.Services", "Metrics.Services\Metrics.Services.csproj", "{E47A13A2-65BA-4FBF-A4BF-87D2091E882B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BFE64BB0-EC5C-4C6B-9ED8-7F790C51ED19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFE64BB0-EC5C-4C6B-9ED8-7F790C51ED19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFE64BB0-EC5C-4C6B-9ED8-7F790C51ED19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E47A13A2-65BA-4FBF-A4BF-87D2091E882B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E47A13A2-65BA-4FBF-A4BF-87D2091E882B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E47A13A2-65BA-4FBF-A4BF-87D2091E882B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E47A13A2-65BA-4FBF-A4BF-87D2091E882B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

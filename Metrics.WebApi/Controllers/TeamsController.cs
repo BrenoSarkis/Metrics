@@ -4,20 +4,27 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Metrics.WebApi.Controllers;
 [ApiController]
-[Route("[controller]")]
 public class TeamsController : ControllerBase{
     private readonly ITeamService teamService;
     public TeamsController(ITeamService teamService) {
         this.teamService = teamService;
     }
 
-    [HttpGet(Name = "")]
-    public IEnumerable<TeamDto> Get() {
+    [HttpGet]
+    [Route("teams/")]
+    public IEnumerable<TeamDto> GetTeams() {
         return teamService.GetTeams();
     }
 
-    [HttpGet(Name = "/{id:int}/cycle_time")]
+    [HttpGet]
+    [Route("teams/{id:int}/cycle_time")]
     public TimeSpan CycleTime(int id) {
         return teamService.GetTeamCycleTime(id);
+    }
+
+    [HttpPost]
+    [Route("teams/synchronize")]
+    public void Synchronize() {
+        teamService.Synchronize();
     }
 }
